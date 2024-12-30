@@ -14,9 +14,4 @@ public class Movement {
         }else throw new IllegalArgumentException("Invalid color input: expected 'w' for White or 'b' for Black");
         return output;
     }
-
-    public static void main(String[] args){
-        Movement move = new Movement();
-        System.out.println(move.moveTurn( "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR k KQkq - 0 1"));
-    }
 }

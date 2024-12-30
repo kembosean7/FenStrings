@@ -30,13 +30,6 @@ public class Board {
         return boardList;
 
 
-    };
-    public static void main(String[] args){
-        Board obj = new Board();
-        List<List<String>>  output = obj.generateBoard("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1");
-        StringBuilder sb = new StringBuilder();
-
-        System.out.println(output);
     }
 
 };
