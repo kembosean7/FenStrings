@@ -37,6 +37,6 @@ public class Board {
         StringBuilder sb = new StringBuilder();
 
         System.out.println(output);
-    };
+    }
 
 };
