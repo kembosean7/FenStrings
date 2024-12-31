@@ -1,14 +1,10 @@
 package org.example;
 
 public class Halfmove {
-    public String halfMoveCloack(String fen){
+    public String halfMoveClock(String halfMoveCheck){
 
-        String[] parts = fen.split(" ");
-        String halfMoveCheck = parts[4];
         int halfMoveInt=  Integer.parseInt(halfMoveCheck);
-
-        return "Halfmove clock:   " + halfMoveInt;
-
+        return "Halfmove clock: " + halfMoveInt;
 
     }
 
