@@ -8,6 +8,7 @@ public class Board {
 
         List<List<String>> boardList = new ArrayList<>();
         String[] rows = fen.split("/");
+
         StringBuilder output = new StringBuilder();
 
         for (String row : rows) {

@@ -8,7 +8,7 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
 
-        String fen = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
+        String fen = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w Kq - 0 1";
         String[] parts = fen.split(" ");
 
         Board board = new Board();
@@ -18,7 +18,7 @@ public class Main {
         Halfmove halfmove = new Halfmove();
         Fullmove fullmove = new Fullmove();
 
-        System.out.println(Arrays.toString(parts));
+
         System.out.println(board.generateBoard(parts[0]));
         System.out.println(movement.moveTurn(parts[1]));
         System.out.println(castling.getCastling(parts[2]));
