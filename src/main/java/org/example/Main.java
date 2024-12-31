@@ -1,5 +1,6 @@
 package org.example;
 
+
 import java.util.Arrays;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -15,6 +16,7 @@ public class Main {
         Castling castling = new Castling();
         EnPassantSquare enPassant = new EnPassantSquare();
         Halfmove halfmove = new Halfmove();
+        Fullmove fullmove = new Fullmove();
 
         System.out.println(Arrays.toString(parts));
         System.out.println(board.generateBoard(parts[0]));
@@ -22,6 +24,8 @@ public class Main {
         System.out.println(castling.getCastling(parts[2]));
         System.out.println(enPassant.enpassantsquare(parts[3]));
         System.out.println(halfmove.halfMoveClock(parts[4]));
+        System.out.println(fullmove.fullMoveCheck(parts[5]));
+
 
     }
 }

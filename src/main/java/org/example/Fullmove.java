@@ -1,12 +1,11 @@
 package org.example;
 
 public class Fullmove {
-    public String fullMove(String fen){
-        String[] parts = fen.split(" ");
-        String halfMoveCheck = parts[5];
-        int halfMoveInt=  Integer.parseInt(halfMoveCheck);
+    public String fullMoveCheck(String fullMove){
 
-        return "Halfmove clock: " + halfMoveInt;
+        int fullMoveInt=  Integer.parseInt(fullMove);
+
+        return "Fullmove clock: " + fullMoveInt;
     }
 
 }
