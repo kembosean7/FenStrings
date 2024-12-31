@@ -1,10 +1,9 @@
 package org.example;
 import java.util.ArrayList;
 import  java.util.List;
-import java.util.Arrays;
 
 public class Castling {
-    public List<String> getCastling(String fen) {
+    public StringBuilder getCastling(String castling) {
 
         String[] parts = fen.split(" ");
         String castling = parts[2];
@@ -12,6 +11,7 @@ public class Castling {
         List<String> castlingState = new ArrayList<>();
         String whiteCastling = "";
         String blackCastling = "";
+        StringBuilder output = new StringBuilder();
 
         for (char x: castling.toCharArray()){
             if(Character.isUpperCase(x)){
@@ -41,7 +41,8 @@ public class Castling {
             castlingState.add("Black can castle queen");
 
         }
-        return castlingState;
+        return output.append(String.join("\n", castlingState));
+
     }
 
 }

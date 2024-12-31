@@ -1,15 +1,13 @@
 package org.example;
 
 public class EnPasantSquare {
-    public String enpasantsquare(String fen){
+    public String enpasantsquare(String enpassant){
 
-        String[] parts = fen.split(" ");
-        String enPasant = parts[3];
-        if(enPasant.equals("-")){
+        if(enpassant.equals("-")){
             return "No en passant square";
         }
         else{
-            return "En passant square: " + enPasant;
+            return "En passant square: " + enpassant;
         }
     }
 
