@@ -4,10 +4,10 @@ import java.util.List;
 
 
 public class Board {
-    public String generateBoard(String fen) {
+    public String generateBoard(String[] fen) {
 
-        String[] parts = fen.split(" ");
-        String board = parts[0];
+
+        String board = fen[0];
         List<List<String>> boardList = new ArrayList<>();
         String[] rows = board.split("/");
         StringBuilder output = new StringBuilder();
@@ -35,10 +35,6 @@ public class Board {
         return output.toString();
 
 
-    }
-    public static void main(String[] args){
-        Board board = new Board();
-        System.out.print(board.generateBoard("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQk - 0 1"));
     }
 
 };
