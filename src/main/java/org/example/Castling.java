@@ -5,8 +5,7 @@ import  java.util.List;
 public class Castling {
     public StringBuilder getCastling(String castling) {
 
-        String[] parts = fen.split(" ");
-        String castling = parts[2];
+
 
         List<String> castlingState = new ArrayList<>();
         String whiteCastling = "";

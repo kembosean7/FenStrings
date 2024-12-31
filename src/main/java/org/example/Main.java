@@ -13,13 +13,13 @@ public class Main {
         Board board = new Board();
         Movement movement = new Movement();
         Castling castling = new Castling();
-        EnPasantSquare enPasant = new EnPasantSquare();
+        EnPassantSquare enPassant = new EnPassantSquare();
 
         System.out.println(Arrays.toString(parts));
         System.out.println(board.generateBoard(parts[0]));
         System.out.println(movement.moveTurn(parts[1]));
         System.out.println(castling.getCastling(parts[2]));
-        System.out.println(enPasant.enpasantsquare(parts[3]));
+        System.out.println(enPassant.enpassantsquare(parts[3]));
 
     }
 }
