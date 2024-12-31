@@ -2,9 +2,8 @@ package org.example;
 import java.util.Arrays;
 
 public class Movement {
-    public String moveTurn(String fen) throws IllegalArgumentException{
-        String[] parts = fen.split(" ");
-        String color = parts[1];
+    public String moveTurn(String color) throws IllegalArgumentException{
+
         String output = null;
 
         if (color.equalsIgnoreCase("w")){

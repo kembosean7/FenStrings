@@ -4,15 +4,11 @@ import java.util.List;
 
 
 public class Board {
-    public String generateBoard(String[] fen) {
+    public String generateBoard(String fen) {
 
-
-        String board = fen[0];
         List<List<String>> boardList = new ArrayList<>();
-        String[] rows = board.split("/");
+        String[] rows = fen.split("/");
         StringBuilder output = new StringBuilder();
-
-
 
         for (String row : rows) {
             List<String> boardRow = new ArrayList<>();
@@ -25,11 +21,9 @@ public class Board {
                     }
                 } else {
                     boardRow.add(String.valueOf(element));
-
                 }
             }
             output.append(String.join(" ", boardRow)).append("\n");
-
 
         }
         return output.toString();

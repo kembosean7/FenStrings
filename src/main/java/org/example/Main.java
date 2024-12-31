@@ -9,7 +9,11 @@ public class Main {
 
         String fen = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQk - 0 1";
         String[] parts = fen.split(" ");
+
         Board board = new Board();
+        Movement movement = new Movement();
         System.out.println(Arrays.toString(parts));
+        System.out.println(board.generateBoard(parts[0]));
+        System.out.println(movement.moveTurn(parts[1]));
     }
 }
