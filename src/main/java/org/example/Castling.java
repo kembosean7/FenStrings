@@ -5,10 +5,11 @@ import java.util.Arrays;
 
 public class Castling {
     public List<String> getCastling(String fen) {
-        List<String> castlingState = new ArrayList<>();
+
         String[] parts = fen.split(" ");
         String castling = parts[2];
 
+        List<String> castlingState = new ArrayList<>();
         String whiteCastling = "";
         String blackCastling = "";
 
@@ -43,17 +44,4 @@ public class Castling {
         return castlingState;
     }
 
-    public static void main(String[] args) {
-
-
-        Castling findCastler = new Castling();
-        List<String> output = findCastler.getCastling("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQq - 0 1");
-        System.out.println(output);
-
-
-
-
-
-
-    }
 }
