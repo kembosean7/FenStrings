@@ -33,7 +33,19 @@ public class testFenString {
         String output = movement.moveTurn("w");
 
         assertEquals("White to move", output);
+    };
+
+    @Test
+    public void testMoveBlack(){
+
+        Movement movement = new Movement();
+        String output = movement.moveTurn("B");
+
+        assertEquals("Black to move", output);
     }
+
+
+
 
 
 }
