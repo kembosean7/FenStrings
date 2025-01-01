@@ -51,14 +51,23 @@ public class testFenString {
 
     }
 
-
     @Test
-    public void testCastlin2(){
+    public void testCastling2(){
 
         Castling castling = new Castling();
         String output = String.valueOf(castling.getCastling("Kk"));
         assertEquals("White can castle king\nBlack can castle king",output);
     }
+
+    @Test
+    public void testCastling3(){
+
+        Castling castling = new Castling();
+        String output = String.valueOf(castling.getCastling("Qkq"));
+        assertEquals("White can castle queen\nBlack can castle both sides", output);
+    }
+
+
 
 
 
