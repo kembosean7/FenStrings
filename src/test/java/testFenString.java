@@ -67,6 +67,13 @@ public class testFenString {
         assertEquals("White can castle queen\nBlack can castle both sides", output);
     }
 
+    @Test
+    public void testEnPassantSquare(){
+
+        EnPassantSquare enPassantSquare = new EnPassantSquare();
+        String output = enPassantSquare.enpassantsquare("-");
+        assertEquals("No en passant square", output);
+    }
 
 
 
