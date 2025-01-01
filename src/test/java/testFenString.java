@@ -31,7 +31,6 @@ public class testFenString {
 
         Movement movement = new Movement();
         String output = movement.moveTurn("w");
-
         assertEquals("White to move", output);
     };
 
@@ -40,8 +39,15 @@ public class testFenString {
 
         Movement movement = new Movement();
         String output = movement.moveTurn("B");
-
         assertEquals("Black to move", output);
+    };
+
+    @Test
+    public void testCastling1(){
+
+        Castling castling = new Castling();
+        String output = String.valueOf(castling.getCastling("KQkq"));
+        assertEquals("White can castle both sides\nBlack can castle both sides", output);
     }
 
 
