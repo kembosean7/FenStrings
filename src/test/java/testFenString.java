@@ -26,7 +26,14 @@ public class testFenString {
         assertEquals("r . b q k b n r\np p p . p p p p\n. . . . . . . .\n. . . . . . . .\n. . . . . . . .\n. . . . . . . .\nP P P . P P P P\nR N B Q K B N R\n", output);
     };
 
+    @Test
+    public void testMoveWhite(){
 
+        Movement movement = new Movement();
+        String output = movement.moveTurn("w");
+
+        assertEquals("White to move", output);
+    }
 
 
 }
