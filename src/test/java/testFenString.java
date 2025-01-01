@@ -75,6 +75,15 @@ public class testFenString {
         assertEquals("No en passant square", output);
     }
 
+    @Test
+    public void testEnPassantSquare2(){
+
+        EnPassantSquare enPassantSquare = new EnPassantSquare();
+        String output = enPassantSquare.enpassantsquare("e3");
+        assertEquals("En passant square: e3", output);
+
+    }
+
 
 
 
