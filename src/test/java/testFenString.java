@@ -12,7 +12,7 @@ public class testFenString {
         String output = board.generateBoard(fenBorad);
 
         assertEquals("r n b q k b n r\np p p p p p p p\n. . . . . . . .\n. . . . . . . .\n. . . . . . . .\n. . . . . . . .\nP P P P P P P P\nR N B Q K B N R\n",output);
-    };
+    }
 
     @Test
     public void testBoard2() {
@@ -24,7 +24,7 @@ public class testFenString {
 
         // The expected output corresponding to the new FEN string
         assertEquals("r . b q k b n r\np p p . p p p p\n. . . . . . . .\n. . . . . . . .\n. . . . . . . .\n. . . . . . . .\nP P P . P P P P\nR N B Q K B N R\n", output);
-    };
+    }
 
     @Test
     public void testMoveWhite(){
@@ -32,7 +32,7 @@ public class testFenString {
         Movement movement = new Movement();
         String output = movement.moveTurn("w");
         assertEquals("White to move", output);
-    };
+    }
 
     @Test
     public void testMoveBlack(){
@@ -40,15 +40,26 @@ public class testFenString {
         Movement movement = new Movement();
         String output = movement.moveTurn("B");
         assertEquals("Black to move", output);
-    };
+    }
 
     @Test
-    public void testCastling1(){
+    public void testCastling1() {
 
         Castling castling = new Castling();
         String output = String.valueOf(castling.getCastling("KQkq"));
         assertEquals("White can castle both sides\nBlack can castle both sides", output);
+
     }
+
+
+    @Test
+    public void testCastlin2(){
+
+        Castling castling = new Castling();
+        String output = String.valueOf(castling.getCastling("Kk"));
+        assertEquals("White can castle king\nBlack can castle king",output);
+    }
+
 
 
 
