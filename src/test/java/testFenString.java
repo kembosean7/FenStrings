@@ -3,6 +3,9 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 import  org.example.*;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+
 public class testFenString {
     @Test
     public void testBoard(){
@@ -80,7 +83,41 @@ public class testFenString {
 
         EnPassantSquare enPassantSquare = new EnPassantSquare();
         String output = enPassantSquare.enpassantsquare("e3");
-        assertEquals("En passant square: e3", output);
+        assertEquals("En passant square: e3", output );
+
+    }
+
+    @Test
+    public void testHalfMoveClock(){
+
+        Halfmove halfmove = new Halfmove();
+        String output1 = halfmove.halfMoveClock("0");
+        String output2 = halfmove.halfMoveClock("4");
+        assertEquals("Halfmove clock: 0", output1);
+        assertEquals("Halfmove clock: 4", output2);
+
+
+    }
+
+    @Test
+    public void testFullMoveCheck(){
+
+        Fullmove fullmove = new Fullmove();
+        String output1 = fullmove.fullMoveCheck("2");
+        String output2 = fullmove.fullMoveCheck("0");
+        assertEquals("Fullmove clock: 2", output1);
+        assertEquals("Fullmove clock: 0", output2);
+    }
+    @Test
+    public void testMain(){
+        ByteArrayOutputStream output = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(output));
+
+        Main.main(null);
+        String expected = "r n b q k b n r\np p p p p p p p\n. . . . . . . .\n. . . . . . . .\n. . . . . . . .\n. . . . . . . .\nP P P P P P P P\nR N B Q K B N R\n" +
+                "\nWhite to move\nWhite can castle king\nBlack can castle queen\nNo en passant square\nHalfmove clock: 0\n" +
+                "Fullmove clock: 1\n";
+        assertEquals(expected.replace("\r\n","\n"),output.toString().replace("\r\n", "\n"));
 
     }
 
